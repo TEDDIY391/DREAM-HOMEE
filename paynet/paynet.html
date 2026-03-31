@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click - To'lov Tizimi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Click</h1>
+            <p>To'lov tizimi</p>
+        </header>
+        
+        <div id="login-section">
+            <div class="card">
+                <h2>🔐 Kirish</h2>
+                <form id="login-form">
+                    <input type="text" id="username" placeholder="Foydalanuvchi nomi" required>
+                    <input type="password" id="password" placeholder="Parol" required>
+                    <button type="submit">Kirish</button>
+                </form>
+                <button id="recover-btn" class="link-button">Parolni unutdingizmi?</button>
+                <p id="login-error" class="error"></p>
+                <hr>
+                <h2>🆕 Ro'yxatdan o'tish</h2>
+                <form id="register-form">
+                    <input type="text" id="new-username" placeholder="Yangi foydalanuvchi nomi" required>
+                    <input type="password" id="new-password" placeholder="Yangi parol" required>
+                    <button type="submit">Ro'yxatdan o'tish</button>
+                </form>
+                <p id="register-message"></p>
+            </div>
+        </div>
+        
+        <div id="dashboard" class="hidden">
+            <div class="card">
+                <h2>Dashboard</h2>
+                <div class="balance-card">
+                    <h3>💰 Balans</h3>
+                    <p><span id="balance">0</span> so'm</p>
+                </div>
+                <button id="logout-btn">🚪 Chiqish</button>
+            </div>
+            
+            <div class="card">
+                <h3>� Balansni to'ldirish</h3>
+                <form id="topup-form">
+                    <input type="number" id="topup-amount" placeholder="Miqdor (so'm)" required>
+                    <button type="submit">➕ Qo'shish</button>
+                </form>
+                <p id="topup-message"></p>
+            </div>
+            
+            <div class="card">
+                <h3>💳 Kartaga to'lov</h3>
+                <button id="open-payment-btn">To'lov sahifasiga o'tish</button>
+            </div>
+            
+            <div class="card">
+                <h3>🆕 Karta qo'shish</h3>
+                <form id="add-card-form">
+                    <input type="text" id="card-name" placeholder="Karta nomi" required>
+                    <input type="text" id="card-number" placeholder="Karta raqami" required>
+                    <button type="submit">➕ Qo'shish</button>
+                </form>
+                <p id="add-card-message"></p>
+                <h4>Kartalar</h4>
+                <ul id="card-list"></ul>
+            </div>
+            
+            <div class="card">
+                <h3>📋 Tranzaksiya tarixi</h3>
+                <ul id="transaction-list"></ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
